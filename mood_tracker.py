@@ -16,7 +16,7 @@ import hashlib
 st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", page_icon="🧘", layout="centered")
 
 # Load secrets
-API_KEY = st.secrets["openai"]["api_key"]
+API_KEY = st.secrets["openrouter_api_key"]["openrouter_api_key"]
 SHEET_KEY = st.secrets["sheets"]["sheet_key"]
 
 def extract_mood_score(mood_result):

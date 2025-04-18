@@ -17,7 +17,7 @@ st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", pag
 
 # Load secrets
 API_KEY = st.secrets["openrouter_api_key"]["openrouter_api_key"]
-SHEET_KEY = st.secrets["sheets"]["sheet_key"]
+SHEET_KEY = st.secrets["sheet_id"]["sheet_id"]
 
 def extract_mood_score(mood_result):
     mood_map = {

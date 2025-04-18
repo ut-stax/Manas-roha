@@ -12,11 +12,12 @@ import pandas as pd
 import plotly.graph_objects as go
 import hashlib
 
+
 st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", page_icon="🧘", layout="centered")
 
 # Load secrets
 API_KEY = st.secrets["openrouter_api_key"]["openrouter_api_key"]
-SHEET_KEY = st.secrets["sheet_id"]["sheet_id"]
+SHEET_KEY = st.secrets["sheets"]["sheet_key"]
 
 def extract_mood_score(mood_result):
     mood_map = {
@@ -33,22 +34,11 @@ def extract_mood_score(mood_result):
             return score
     return 3
 
+
 @st.cache_resource
 def connect_to_gsheet():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds_info = {
-        "type": st.secrets["gcp_service_account"]["type"],
-        "project_id": st.secrets["gcp_service_account"]["project_id"],
-        "private_key_id": st.secrets["gcp_service_account"]["private_key_id"],
-        "private_key": st.secrets["gcp_service_account"]["private_key"],
-        "client_email": st.secrets["gcp_service_account"]["client_email"],
-        "client_id": st.secrets["gcp_service_account"]["client_id"],
-        "auth_uri": st.secrets["gcp_service_account"]["auth_uri"],
-        "token_uri": st.secrets["gcp_service_account"]["token_uri"],
-        "auth_provider_x509_cert_url": st.secrets["gcp_service_account"]["auth_provider_x509_cert_url"],
-        "client_x509_cert_url": st.secrets["gcp_service_account"]["client_x509_cert_url"],
-        "universe_domain": st.secrets["gcp_service_account"]["universe_domain"]
-    }
+    creds_info = json.loads(st.secrets["gcp"]["gcp_credentials"])
     creds = Credentials.from_service_account_info(creds_info, scopes=scope)
     client = gspread.authorize(creds)
     return client

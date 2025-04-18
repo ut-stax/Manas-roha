@@ -12,12 +12,11 @@ import pandas as pd
 import plotly.graph_objects as go
 import hashlib
 
-
 st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", page_icon="🧘", layout="centered")
 
 # Load secrets
 API_KEY = st.secrets["openrouter_api_key"]["openrouter_api_key"]
-SHEET_KEY = st.secrets["sheet_id"]["sheet_id"]
+SHEET_KEY = st.secrets["sheet_id"]["sheet_id"]  # Updated to reflect correct key in secrets.toml
 
 def extract_mood_score(mood_result):
     mood_map = {
@@ -38,7 +37,7 @@ def extract_mood_score(mood_result):
 @st.cache_resource
 def connect_to_gsheet():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds_info = json.loads(st.secrets["gcp"]["gcp_credentials"])
+    creds_info = dict(st.secrets["gcp_service_account"])  # Updated to access the correct key
     creds = Credentials.from_service_account_info(creds_info, scopes=scope)
     client = gspread.authorize(creds)
     return client

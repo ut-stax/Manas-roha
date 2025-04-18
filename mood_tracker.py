@@ -15,8 +15,9 @@ import hashlib
 
 st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", page_icon="🧘", layout="centered")
 
-API_KEY = "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"
-
+# Load secrets
+API_KEY = st.secrets["openai"]["api_key"]
+SHEET_KEY = st.secrets["sheets"]["sheet_key"]
 
 def extract_mood_score(mood_result):
     mood_map = {
@@ -37,17 +38,18 @@ def extract_mood_score(mood_result):
 @st.cache_resource
 def connect_to_gsheet():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = Credentials.from_service_account_file("manasaroha-7819c4c8c6bc.json", scopes=scope)
+    creds_info = json.loads(st.secrets["gcp"]["gcp_credentials"])
+    creds = Credentials.from_service_account_info(creds_info, scopes=scope)
     client = gspread.authorize(creds)
     return client
 
 def get_main_sheet():
     client = connect_to_gsheet()
-    return client.open_by_key("1EyJimNqxXhh5rFabGHOyUidbDaZgslQecOOjOSJuSpk").sheet1
+    return client.open_by_key(SHEET_KEY).sheet1
 
 def get_user_sheet():
     client = connect_to_gsheet()
-    spreadsheet = client.open_by_key("1EyJimNqxXhh5rFabGHOyUidbDaZgslQecOOjOSJuSpk")
+    spreadsheet = client.open_by_key(SHEET_KEY)
     try:
         sheet = spreadsheet.worksheet("Users")
     except:
@@ -62,9 +64,12 @@ def get_user_sheet():
             if col_index > sheet.col_count:
                 sheet.add_cols(col_index - sheet.col_count)
             sheet.update_cell(1, col_index, col)
-            header = sheet.row_values(1) 
+            header = sheet.row_values(1)
 
     return sheet
+
+# (The rest of the code remains unchanged)
+
 
 def save_mood_to_sheet(name, age, user_type, mood_text, mood_result, recommendation):
     sheet = get_main_sheet()

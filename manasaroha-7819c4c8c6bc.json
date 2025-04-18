@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "manasaroha",
+  "private_key_id": "7819c4c8c6bc0fd8aa1a28660cd1e7fe8ea67e25",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCzlzU4ewCLJ44n\n2A8IQQruVDJIyW0efoJD1gIPrhqQgG57H2mE7FE7iQr23E2DFqOuKu7qnKXKR1eR\nKw5QI+BShZOJHBHC3GDLHqsDLJEUzJLg1E5/UPxgmeEFC/q1nCaxap7kiYMGvVro\nKWgeAk9WQn5Fn+k5yMIXNtOeb+2Rz86f7YplMt5np3ha+owRjnv0AJFya3LXFuhm\n0Z/6R24rG0Lx63i6NARKGNRpzPvetmWD+UOTM6adaUj838tUewyTK/oGHvpb04uJ\n/HtaN7rovaLxYBn5bEepZipg9lK5k5D1k2VwmRkgNCbt6kQ7f2SSjeDn/6V+gjah\nnv2KfeIBAgMBAAECggEACaWRU0kFfMlm0RcW/5+BdySIqvDpmUi8YJPJ+o5PQ6cn\nyBn7hgtXoGC6eQuDvQs7RutsIqgVc78kogSeY975eWqkGSpWfebD6u/pHxDcHjI6\n9YlnSgl59Qpu/uFnhIKFxY6aSGERQQxs1KmyEQ1DYQ54pUQeDV+OUBw+08o5Xaql\nAAWrhyi/zhyaZvTBLz/3MrZ5aq9LzI8lIogrX3gYWvIcp08DHdw8xnCGlFouEoo8\n4WZRYt31EekYQ+/hR6SR+lHCBLA2c/lqWcYrJaf3KjhDx71J/6HIoba9ksmgMUW5\nXOHDsREBiT0cHz9QJH3VPXjCp7f0Ccku3cjTjLgAnQKBgQD4aR2zB/Tr3lAub2nq\nXUW2d69mwcUT3dSYYI2l2nEBS6IWofpWWDA9aVtMVg6VoqPVaSsakD0KGboTyIAp\nlaE9V++6yTwi8JEpcjSjTw4AE0S3dCcTrPSl9udE/wSdakCtPvvg5E/WlOgf2isP\nhE18KyE2sEQeaqkrZYL0JRh7MwKBgQC5E9VHj1m0d7aD3KVYw+62BQG48Zwt36pf\nnDFeF7tKAz31mJC/teiIgd3qO/nBvL2ktgAcRaWtnQDcKxQ6r9tppidNoNXpRTY9\nTozAkVLtQ5zLlr4ZBJAL59I2c5//CBBaRrCvj/G1keqB8th7+LfB0NhB80hbMper\nV9zRgdaN+wKBgQCF9rI0jZLw7LhTAnSdFmX1DECEavUsTJJNBqz9B3uv1ij4iavm\nirKhO8MnvLUqz0YJXikHr0ervcoSxysOwgntehHnqoSK1y+BqXxnoceMFNgXE0XL\nn5dkNW3tUJYdimKMy42sb5P6xd0U6GQWfyQGVYAY7SAfQyguJhVkMukr7wKBgDyJ\n1UDUDhau9d+KA/fWFzYoyxhwx5Jlz/f4Qlmxz4x1JQY5wldDLG3CdRFSTu7lSu8e\nrUiSK5Bvg8GAwdw0e8PCGqcUzgPApO5GzFmM76A2dopNo57RVEDgsm0nQxWL0LWG\n2/KBViH7OccJ5XAfuhPGuYZRCsDx+pSMZ+mL29+TAoGADxW0rcdngoHeGn+PIhgX\n1nJbsT0tcO0oH3LiPzmRb/Rzi8PCAfKUsWMSsS3aemzE0uEPUIZN6AAxDfDby34k\nNoBGRynHaeBmvs2L5vRAqmANxQIyZ7IzFN9oJwlXTeVBODE2o+3YL6V2Yl3qzaFQ\n0wtMb+vA/6xENMKVZ9uObSw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "manasaroha-sheets-access@manasaroha.iam.gserviceaccount.com",
+  "client_id": "110899129135677329215",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/manasaroha-sheets-access%40manasaroha.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

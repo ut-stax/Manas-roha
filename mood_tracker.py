@@ -14,9 +14,8 @@ import hashlib
 
 st.set_page_config(page_title="Manasāroha: Your Mental Wellness Companion", page_icon="🧘", layout="centered")
 
-# Load secrets
-API_KEY = st.secrets["openrouter_api_key"]["openrouter_api_key"]
-SHEET_KEY = st.secrets["sheet_id"]["sheet_id"]  # Updated to reflect correct key in secrets.toml
+API_KEY = st.secrets["openrouter_api_key"]  # Directly access the value
+SHEET_KEY = st.secrets["sheet_id"]  # Directly access the value
 
 def extract_mood_score(mood_result):
     mood_map = {
